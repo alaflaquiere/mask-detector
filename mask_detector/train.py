@@ -7,6 +7,8 @@ from data_utils.mask_dataset import MaskDataset
 from utils.logger import Logger
 from mask_detector import MaskClassifier
 
+# TODO: plot the confusion matrix at the end of training
+
 
 def train(dataFrame_p: Path, output_p: Path):
 
@@ -22,6 +24,7 @@ def train(dataFrame_p: Path, output_p: Path):
 
     # create a logger
     logger = Logger(output_p / "logs")
+    print("Follow progress on TensorBoard...")
 
     # create the model
     model = MaskClassifier(train_dataset, val_dataset,
@@ -55,5 +58,3 @@ if __name__ == "__main__":
     best_solution = train(args.df, args.o)
 
     clean_checkpoints(args.o / "checkpoints", best_solution)
-
-    # TODO: display confusion matrix
