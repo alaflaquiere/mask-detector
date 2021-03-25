@@ -1,4 +1,3 @@
-import os
 from pathlib import Path
 import pandas as pd
 from google_drive_downloader import GoogleDriveDownloader as gdd
@@ -17,7 +16,7 @@ def get_RFMD(root_p: Path = Path("data")):
         gdd.download_file_from_google_drive(file_id=RMFD_URL,
                                             dest_path=rar_p,
                                             unzip=True)
-        os.remove(rar_p)
+        rar_p.unlink()
     return dataset_p
 
 

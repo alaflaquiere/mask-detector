@@ -5,7 +5,6 @@ import torch
 from tqdm import tqdm
 from skvideo.io import FFmpegWriter, vreader, ffprobe
 from torchvision.transforms import Compose, Resize, ToPILImage, ToTensor
-import matplotlib.pyplot as plt
 
 from face_detector import FaceDetector
 from mask_classifier import MaskClassifier
