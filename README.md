@@ -2,6 +2,8 @@
 
 Code adapted from [JadHADDAD92/covid-mask-detector](https://github.com/JadHADDAD92/covid-mask-detector)
 
+![gif](vid.gif)
+
 ## Train your own network
 
 ```Shell
@@ -25,5 +27,3 @@ python data_utils/get_YT_video.py
 # run the detector
 python run.py
 ```
-
-![gif](vid.gif)
